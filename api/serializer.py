@@ -7,7 +7,7 @@ class ItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Item
-        fields = ("id", "title", "created_at")
+        fields = ("id", "title", "created_at", "completed")
 
     def get_created_at(self, obj):
         return obj.created_at.timestamp()
